@@ -1,0 +1,11 @@
+<input type="checkbox" id="delete-modal" class="modal-toggle" [checked]="showDeleteModal" />
+<div class="modal">
+    <div class="modal-box">
+        <h3 class="font-bold text-lg">Confirm Delete</h3>
+        <p>Are you sure you want to delete the post titled "{{ selectedPost?.title }}"?</p>
+        <div class="modal-action">
+            <button (click)="onConfirm()" class="btn bg-rose-300">Yes, Delete</button>
+            <button (click)="onCancel()" class="btn">Cancel</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<nav class="navbar bg-pink-200 shadow-lg">
+    <div class="navbar-start">
+        <a routerLink="/posts" class="btn btn-ghost normal-case text-xl bg-pink-200">Posts API App</a>
+    </div>
+
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+            <li class="text-base" *ngIf="isLoggedIn"><a routerLink="/create">Create Post</a></li>
+        </ul>
+    </div>
+
+    <div class="navbar-end">
+        <a *ngIf="!isLoggedIn" class="btn bg-base-100" routerLink="/login">Login</a>
+        <a *ngIf="isLoggedIn" (click)="logout()" class="btn">Logout</a>
+    </div>
+</nav>

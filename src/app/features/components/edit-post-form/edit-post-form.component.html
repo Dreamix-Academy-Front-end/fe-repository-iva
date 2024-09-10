@@ -1,0 +1,35 @@
+<div class="flex justify-center mt-10">
+    <form [formGroup]="editPostForm" (ngSubmit)="onSubmit()"
+        class="w-full max-w-lg shadow-md bg-base-100 p-6 rounded-lg">
+        <h2 class="text-2xl font-bold mb-6 text-center">Edit Post</h2>
+
+        <div class="form-control mb-4">
+            <label class="label">
+                <span class="label-text">Post Title</span>
+            </label>
+            <input type="text" formControlName="title" placeholder="Enter title"
+                class="input input-bordered w-full" />
+            <div *ngIf="editPostForm.controls['title'].invalid && editPostForm.controls['title'].touched"
+                class="text-red-500 text-sm">
+                Title is required.
+            </div>
+        </div>
+
+        <div class="form-control mb-6">
+            <label class="label">
+                <span class="label-text">Post Text</span>
+            </label>
+            <textarea formControlName="body" placeholder="Enter text" class="textarea textarea-bordered w-full"
+                rows="4"></textarea>
+            <div *ngIf="editPostForm.controls['body'].invalid && editPostForm.controls['body'].touched"
+                class="text-red-500 text-sm">
+                Post text is required.
+            </div>
+        </div>
+
+        <div class="form-control flex gap-2">
+            <button type="submit" class="btn bg-indigo-200" [disabled]="editPostForm.invalid">Save Changes</button>
+            <button type="button" (click)="cancel()" class="btn btn-secondary">Cancel</button>
+        </div>
+    </form>
+</div>

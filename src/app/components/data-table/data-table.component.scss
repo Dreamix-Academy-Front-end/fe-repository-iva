@@ -1,0 +1,61 @@
+html {
+    box-sizing: border-box;
+    background-color: oklch(var(--b1));
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 500;
+    color: oklch(var(--bc));
+    text-align: center;
+}
+
+
+table {
+    background-color: oklch(var(--b2));
+    border: 2px solid oklch(var(--b3));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    font-size: 20px;
+    color: oklch(var(--ac));
+}
+
+td, th {
+    border: 2px solid oklch(var(--s));
+}
+
+thead, 
+button[disabled],
+.input:focus {
+    background-color: #f5cedc;
+}
+
+.alert {
+    background-color: #f31b6a;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.loading-infinity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mr-4 {
+    margin-left: 30px;
+}
+
+.btn-group > button {
+    margin: 2px;
+}

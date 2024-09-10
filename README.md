@@ -1,27 +1,73 @@
-# PublicApiProject
+# Public API Angular Project with Authentication
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+## Overview
 
-## Development server
+This project is a simple CRUD application that interacts with a `db.json` file containing a collection of posts in JSON format. The application allows users to view, create, edit, and delete posts based on their authentication status. It leverages the **json-server** as a mock backend, and **DaisyUI** for styling, all built on the **Angular** framework.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Public Access:**
+  - View the list of posts
+  - Search posts by title
+  - View details of individual posts
+  
+- **Authenticated Users:**
+  - Create new posts
+  - Edit existing posts
+  - Delete posts
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tech Stack
 
-## Build
+- **Frontend:** Angular
+- **Backend:** json-server (mock API with `db.json`)
+- **UI Components:** DaisyUI (Tailwind CSS components)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Authentication
 
-## Running unit tests
+Only authenticated users can perform **create**, **edit**, and **delete** operations on posts. Unauthenticated users can only view and search posts. This project uses a simple login system to control access to these features.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Setup Instructions
 
-## Running end-to-end tests
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/iva7777/public-api-project.git
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. **Navigate to the project directory:**
+   ```bash
+   cd angular-public-api-project
+   ```
 
-## Further help
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. **Run json-server to simulate the API:**
+   ```bash
+   npx json-server --watch db.json
+   ```
+
+5. **Start the Angular app:**
+   ```bash
+   ng serve
+   ```
+
+6. **Access the app:**
+   - Open your browser and go to `http://localhost:4200`.
+
+## Usage
+
+- **Public users** can search posts by title and view details.
+- **Logged-in users** can create new posts, edit existing posts, and delete posts.
+
+## Screenshots
+
+- **Post List View:**  
+  Displays all posts with a search bar.
+
+- **Post Details:**  
+  Shows detailed information about a selected post.
+
+- **Create/Edit Post Form:**  
+  Logged-in users can submit new posts or update existing ones.
